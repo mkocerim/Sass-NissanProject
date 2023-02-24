@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#cars-sec .cars-card h3, #cars-sec h1, .hero .slogan h2, .hero .slogan h1, #exterior h1, #interior h1 {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#cars-sec .cars-card h3, #cars-sec h1, .hero .slogan h2, .hero .slogan h1, .container main .label-box h1, #exterior h1, #interior h1 {
   font-family: "Inter";
   letter-spacing: 2px;
   white-space: nowrap;
@@ -42,10 +43,130 @@
   color: black;
 }
 
+#cars-sec .cars-card h3, #cars-sec h1, .hero .slogan h2, .hero .slogan h1, .container main .label-box h1, #exterior h1, #interior h1 {
+  font-family: "Inter";
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+#exterior, #interior {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+}
+#exterior h1, #interior h1 {
+  font-size: 30px;
+}
+#exterior p, #interior p {
+  text-align: center;
+  font-size: 22px;
+  max-width: 500px;
+  font-weight: 300;
+}
+#exterior button, #interior button {
+  background-color: transparent;
+  padding: 20px 50px;
+  letter-spacing: 5px;
+  border: 2px solid white;
+  transition: all 0.2s;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+}
+#exterior button:hover, #interior button:hover {
+  background-color: white;
+  color: black;
+}
+
+.container img {
+  max-width: 1800px;
+}
+.container h6 {
+  font-size: 25px;
+}
+.container .menu {
+  background-color: black;
+  padding: 10px;
+  height: 84px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .menu img {
+  width: 4%;
+}
+.container .menu-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  padding-left: 20px;
+}
+.container .menu-items a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.4s;
+}
+.container .menu-items a:hover {
+  color: orangered;
+  transition: all 0.4s;
+}
+.container main {
+  padding: 40px;
+}
+.container main .label-box {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid;
+  width: 500px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.container main .label-box h1 {
+  margin-top: 50px;
+}
+.container main .label-box p {
+  margin-top: 10px;
+}
+.container main .label-box .label {
+  margin-top: 30px;
+  display: block;
+}
+.container main .label-box select {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid;
+  width: 500px;
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 10px;
+}
+.container main .options {
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+.container main .options .option {
+  width: 100px;
+  white-space: nowrap;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -154,13 +275,15 @@ header #nav-right {
 }
 .hero .images-main {
   max-width: 900px;
+  transition: translate 0.4s;
+}
+.hero .images-main:hover {
+  translate: -200px 100px;
+  transition: all 0.4s;
 }
 @media (max-width: 800px) {
   .hero .images-main {
     max-width: 500px;
-  }
-  .hero .images-main:hover {
-    translate: -200px;
   }
 }
 .hero .images-second {
@@ -174,6 +297,9 @@ header #nav-right {
 
 #interior {
   background-image: radial-gradient(circle, transparent 10%, rgba(0, 0, 0, 0.507)), url(/images/interior.jpg);
+}
+#interior button a {
+  text-decoration: none;
 }
 
 #exterior {
